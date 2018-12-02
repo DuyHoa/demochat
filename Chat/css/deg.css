@@ -3,49 +3,60 @@
     box-sizing: border-box;
 }
 
-.chatContainer{
-    width: 400px;
-    height: 500px;
-    border: 2px solid #ddd;
-
-}
-
 .chatContainer > .chatHeader{
-    width: 100%;
+    height: 50px ;
     background: white;
     padding: 5px;
     border-bottom: 1px solid #ddd;
+	background-color: #0099FF;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
 }
 
 .chatContainer > .chatHeader > h3{
     margin: 0;
     padding: 0;
     font-weight: 400;
-    color: #333;
+    color: white;
+	text-align: center;
+	
 }
 
 .chatContainer > .chatMessages{
-    height: 420px;
-    border-bottom: 1px solid #ddd;
+    height: 300px;
+    border: 0px solid #ddd;
     overflow-y: scroll;
+	background-color: #F5F5F5;
+}
 
+.chatMessages::-webkit-scrollbar {
+	display: none;
+}
+
+.chatBottom{
+	background-color: #F5F5F5;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	height: 50px;
 }
 
 .chatContainer > .chatBottom form input[type='submit']{
-    padding: 6px;
+    padding: 3px;
     background: white;
-    border: 1px solid #ddd;
     cursor: pointer;
-
+	margin-top: -38px;
+	float: right;
+	position:relative;
+	right: 10px;
 }
 
 .chatContainer > .chatBottom form input[type='text']{
-    width: 85%;
+    width: 310px;
     padding: 3px;
     padding-left: 10px;
-    border: 1px solid #ddd;
+    border: 0px solid #ddd;
     margin: 5px;
-    height: 30px;
+    height: 40px;
 }
 
 .cm{
@@ -54,3 +65,35 @@
     padding: 5px;
 
 }
+
+.user_notlog{
+	text-align: right;
+	background-color: #0066FF;
+	display: absolute;
+	clear: both;
+	color: white;
+	margin-left: 20px;
+	margin-top: 15px;
+	margin-right: 5px;
+	width:auto;
+}
+
+.chatMessages li{
+	
+	list-style: none;
+	padding: 10px;
+	border: 1px solid #ddd;
+	
+	border-radius: 5px;
+}
+
+.ad{
+	background-color: white;
+	display: absolute;
+	padding-right:10px;
+	margin-right: 20px;
+	margin-top: 15px;
+	margin-left: 5px;
+}
+
+<-https://codepen.io/radibit/pen/bpRpPz->

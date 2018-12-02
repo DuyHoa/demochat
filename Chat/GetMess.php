@@ -1,13 +1,13 @@
 <?php
-    $db = new PDO('mysql:host=localhost;dbname=chat','root','');
+    $db = new PDO('mysql:host=localhost;dbname=chat','chat_live','1234');
     $query = $db->prepare("SELECT * FROM messages");
-    $query->excute();
+    $query->execute();
 
-    while($fetch = $query->fetch(DPO::FETCH_ASSOC)){
+    while($fetch = $query->fetch(PDO::FETCH_ASSOC)){
         $name = $fetch['name'];
-        $message = $fetch['message'];
+        $text = $fetch['text'];
 
-        echo "<li class = 'cm'><b>".ucwords($name)."</b>: ".$message."</li>";
+        echo "<li class = 'cm'><b>".ucwords($name)."</b>: ".$text."</li>";
 
     }
 ?>
