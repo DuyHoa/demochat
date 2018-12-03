@@ -1,0 +1,76 @@
+<html>
+<head>
+	<script>
+		var url_img = 'https://static.thenounproject.com/png/214280-200.png';
+		var url_link = '';
+		var message_box = 'Welcome to mypage';
+		var show_ads = '';
+		var pos = '';
+		var bottom_pos = '20px';
+		var right_pos = '';
+		var left_pos = '';
+		var top_pos = '';
+		var width = 'auto';
+		var height = 'auto';
+
+		
+		function myfuc(){
+			//insert image_pop bottom;
+			/*
+			var img = document.getElementsByClassName("mess_button");
+			img.style.display = 'block';
+			img.style.background-image = url_img;
+			img.style.position = pos;
+			img.style.top = top_pos;
+			img.style.bottom = bottom_pos;
+			img.style.right = right_pos;
+			img.style.left = left_pos;
+			*/
+			
+			var = image_icon = document.createElement("IMG");
+			image_icon.setAttribute("src", url_img);
+			
+			
+			document.getElementsByClassName("image_icon").appendChild(image_icon);
+			
+			//add linked message
+			var a = document.createElement("a");
+			a.className = "image_icon";
+			a.setAttribute("href", url_link);
+			document.getElementById("svg_tag")[0].appendChild(a);
+			
+			
+			//add text_pop reload()
+			var text_welcome = document.createElement("a");
+			text_welcome.className = "message_welcome";
+			text_welcome.innerHTML =  message_box;
+			document.getElementsByClassName("message_welcome").style.display = 'block';
+			document.getElementsByClassName("message_welcome").style.border = '1px solid #fff';
+			
+			document.getElementById("mess_content")[0].appendChild(text_welcome);
+					
+		});
+				
+
+
+	</script>
+</head>
+
+<body onload="myfuc()">
+<div class="mess" id="mb" style = "border-radius: 50%; cursor: pointer; ">
+	<div class= "mess_button">
+		<svg viewbox="0 0 100 100"  width="5%" id="svg_tag" >
+			<a class="ske_form">
+				<image class= "ske_img"/>
+			</a>
+			<circle cx="50" cy="50" r="49.7" fill="none" stroke="#ddd" stroke-width="1"/>
+		</svg>
+	</div>
+	
+	<div id = "mess_content" style="block;">
+		
+	
+	</div>
+</div>
+</body>
+</html>
