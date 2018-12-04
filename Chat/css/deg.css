@@ -162,3 +162,31 @@
 	border-radius: 50%;
 	border: 1px solid #fff;
 }
+
+.ske_a{
+	display: block;
+	text-decoration: none;
+}
+
+.ske_img{
+	display: block;
+}
+
+.mess_content{
+	display: block;
+	
+}
+
+.content_wel li{
+	list-style: none;
+}
+
+.mess_content{
+	display: block;
+	border: 1px solid #fff;
+	
+}
+
+.content_wel{
+	display: block;
+}

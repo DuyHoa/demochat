@@ -9,39 +9,12 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     
 	<script>
-		var url_img = 'https://static.thenounproject.com/png/214280-200.png';
-		var url_link = '#';
-		function(){
-			document.getElementsByClassName("ske_a").setAttribute("href", url_link);
-			document.getElementsByClassName("ske_img").setAttribute("src", url_img);
-		}
-	</script>
-	
-	
-	<!--<script>
+		var url_img = 'https://static.thenounproject.com/png/214280-200.png'; //Image chat icon
+		var url_link = '#';	//link
+		var time_delay = 0; //delay time show mess welcome
+		var content_welcome = 'Hello there'	//fake AI
 		
-        // Enable pusher logging - don't include this in production
-        Pusher.logToConsole = true;
-
-        var pusher = new Pusher('5d7201ec76dbf8b38f7d', {
-            cluster: 'ap1',
-            forceTLS: true
-        });
-        var channel = pusher.subscribe('my-channel');
-		if (Notification.permission === "granted"){
-			channel.bind('my-event', function(data) {
-				var notification = new Notification('Vinno', {
-					icon: 'https://img.icons8.com/metro/1600/cool.png',
-					body: data,
-				});
-				
-				notification.onclick = function () {
-					window.open("http://vinno.vn"); 
-				}					
-			});
-		}-->
 	</script>
-	<script language="JavaScript" src="chatfunc.js"></script>
 	
 	<script>
 		function myFuct(){
@@ -52,7 +25,18 @@
 			a.innerHTML = na + ": " + data;
 			setTimeout(function(){
 				document.getElementsByClassName("chatMessages")[0].appendChild(a);
-			},1200);		
+			},1200);
+
+			
+			var chat_wel = document.getElementsByClassName("mess_content");
+			var wc = document.createElement("LI");
+			wc.className = 'content_wel';
+			wc.innerHTML = content_welcome;
+			
+			setTimeout(function(){
+				chat_wel[0].appendChild(wc);
+			},time_delay);
+			
 		};
 				
 		var first_click = true;
@@ -162,9 +146,10 @@
 	</div>
 </div>
 <div class="mess" id="mb">
+	<div class = "mess_content"></div>
 	<div class= "mess_button" >
 		<svg viewbox="0 0 100 100"  width="100%" id="svg_tag">
-			<a class = "ske_a">
+			<a class = "ske_a" >
 				<image class = "ske_img"/>
 			</a>
 			<circle class="background" cx="49.9" cy="49.9" r="49.9" fill="none" stroke-width = "1"/>

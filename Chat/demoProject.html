@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>Chatter</title>
+	<link rel = 'stylesheet' type='text/css' href="demostyle.css"/>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+	<script>
+		var url_img_close = 'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-128.png'
+		var url_img = 'https://static.thenounproject.com/png/214280-200.png'; //Image chat icon
+		var url_link1 = '#';	//link
+		var url_link2 = '#';	//link
+		var url_link3 = '#';	//link
+		var time_delay = 10; //delay time show mess welcome (s)
+		var content_welcome = 'Hello there'	//fake AI
+		var num_of_button = 3;
+		
+	</script>
+	
+	<script>
+		function myFuct(){
+			/*var chat_wel = document.getElementsByClassName("mess_content");
+			var wc = document.createElement("a");
+			wc.className = 'content_wel';
+			wc.innerHTML = content_welcome;
+			
+			setTimeout(function(){
+				chat_wel[0].appendChild(wc);
+			},time_delay);
+			
+			for(var i = 0; i < num_of_button; i++){
+				var wc = document.createElement("INPUT");
+				wc.className = 'content_wel'+ i;
+			}*/
+			
+			
+			time_cal = time_delay*1000;
+			time_r = 2000;
+			if(document.getElementById("cs").style.display == 'none'){
+				setInterval(function(){
+					document.getElementById("m").style.display = 'block';
+					document.getElementById("news").style.display = 'block';
+					//setTimeout(function(){
+					//	document.getElementById("m").style.display = 'none';
+					//},time_r)
+				},time_cal);
+			}	
+		};
+		
+	</script>
+	</head>
+<body onload = "myFuct()">
+<div class="chattag" id="cs">
+    <div class="chatContainer">
+		<div class="close_bt" id="cl">
+			<li>x</li>
+		</div>
+		<script>
+			document.getElementById("cl").onclick = function(){
+				if(document.getElementById("cs").style.display == 'block')
+					document.getElementById("cs").style.display = 'none'
+			};
+		</script>
+        <div class="chatMessages">
+		
+		
+			<form action="#" class="button_form">
+				<center>
+					<div class = "bt1">
+						<input type="button" id = "bt1" name="bt1" value="Form_conten1"/>
+					</div>
+					<div class = "bt2">
+						<input type="button" id = "bt2" name="bt1" value="Form_conten2"/>
+					</div>
+					<div class = "bt3">
+						<input type="button" id = "bt3" name="bt1" value="Form_conten3"/>
+					</div>
+				</center>
+		</div>
+    </div>
+</div>
+
+
+<div class="mess" id="mb">
+	<div class = "mess_content" id = "m" style="display: none;">
+		<a class = "mess_wel">Hello there!</a>
+	</div>
+	<div class= "mess_button" >
+		<svg viewbox="0 0 100 100"  width="100%" id="svg_tag">
+			
+			<circle class="background" cx="49.9" cy="49.9" r="49.9" fill="none" stroke-width = "1"/>
+			<image id="im" class="ske_img" href = "http://cdn.onlinewebfonts.com/svg/img_311846.png" />
+		</svg>
+		<span class="notification-num" id="news">hi</span>
+	</div>
+	<script>
+		document.getElementById("mb").onclick = function () {
+			if(document.getElementById("cs").style.display == 'none'){
+				document.getElementById("cs").style.display = 'block';
+				document.getElementById("m").style.display = 'none';
+				document.getElementById("news").style.display = 'none';
+				document.getElementById("im").removeAttribute("href");
+				document.getElementById("im").setAttribute("href", "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-128.png");
+			}
+			else{
+				document.getElementById("cs").style.display = 'none';
+				document.getElementById("im").removeAttribute("href");
+				document.getElementById("im").setAttribute("href", "http://cdn.onlinewebfonts.com/svg/img_311846.png");
+			}	
+		};
+	</script>
+</div>
+</body>
+</html>
+	

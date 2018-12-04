@@ -1,0 +1,160 @@
+*{
+    font-family: 'Open Sans';
+}
+
+li{
+	list-style: none;
+	
+}
+
+#bt1, #bt2, #bt3{
+	display: block;
+	padding: 20px;
+	left: 50%;
+	text-align: center;
+	margin: 0px;
+	float: center;
+	
+}
+
+.close_bt li:hover{
+	color: red;
+	
+}
+
+.close_bt{
+	cursor: pointer;
+	position: relative;
+    display: block;
+    float: right;
+    right: 22;
+    font-size: 25;
+}
+
+.bt1, .bt2, .bt3{
+	padding: 10px;
+	margin: 0px;
+	width: auto;
+	border-radius: 50%;
+}
+
+.button_form{
+	text-align: center;
+	display: block;
+	padding: 25px;
+	float: center;
+}
+
+.chattag{
+	position: fixed;
+	float: right;
+	bottom: 90px;
+	width: 300px;
+    height: auto;
+	display: block;
+	right: 35px;
+}
+
+.chatContainer{
+    width: auto;
+    height: auto;
+    border: 0px solid #ddd;
+
+}
+
+.chatContainer > .chatMessages{
+    height: 320px;
+    border-bottom: 0px solid #ddd;
+    overflow-y: scroll;
+	background-color: #F5F5F5;
+	text-align: center;
+	outline: none;
+}
+
+.chatMessages::-webkit-scrollbar {
+	display: none;
+}
+
+.mess{
+    -webkit-border-radius: 50%;
+
+}
+
+.image-mess{
+	width: 50px;
+	height: auto;
+	background-size: cover;
+}
+
+.mess_button{
+	cursor: pointer;
+	
+}
+
+.mess_button{
+	height: 49.9px;
+	width: 49.9px;
+	cursor: pointer;
+	
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	position: fixed;
+	bottom: 30px;
+	right: 20px;
+	border-radius: 50%;
+	border: 0px solid #fff;
+}
+
+.ske_a{
+	display: block;
+	text-decoration: none;
+}
+
+.ske_img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.mess_content{
+	display: none;
+}
+
+.content_wel li{
+	list-style: none;
+}
+
+.mess_content{
+	position: fixed;
+	bottom: 41px;
+	right: 80px;
+	width: auto;
+	height: auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+.mess_content a{
+	text-decoration: none;
+	padding: 20px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+
+.content_wel{
+	display: block;
+}
+
+.notification-num{
+	position: absolute;
+    top: -10%;
+    left: 50%;
+    font-size: 1.0rem;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border: 4px solid red;
+    color: white;
+    text-align: center;
+	display: none;
+}
